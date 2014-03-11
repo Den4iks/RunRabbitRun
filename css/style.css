@@ -1,0 +1,62 @@
+.main{
+    float: left
+}
+
+#table{
+    float: left;
+    margin: 100px 0px 0px 50px;
+    width: 500px;
+    height: 500px;
+}
+
+.form{
+    margin-left: 850px;
+    margin-top: 150px;
+    width: 280px;
+    height: 380px;
+    background-image: linear-gradient(to bottom, #FFFFFF 0px, #E6E6E6 100%);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.15) inset, 0 1px 10px rgba(0, 0, 0, 0.075);
+}
+
+
+.row {
+        width: 360px;
+        margin-top: 15px;
+        float: left;
+    }
+
+.row span {
+        text-align: right;
+        margin: 8px 15px 0 0;
+        display: block;
+        float: left;
+        width: 150px;
+    }
+.row input {
+        width: 40px;
+        height: 30px;
+        border-radius: 3px;
+    }
+.mybutton{
+    float: left;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+.grid_item {
+    display: block;
+    border: 1px solid #bbb;
+    float: left;
+    line-height:12px;
+    font-size:10px;
+}
+
+.tree{
+background: brown;
+}
+
+.shrub{
+    background: green;
+}
