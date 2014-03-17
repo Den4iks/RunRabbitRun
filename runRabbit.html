@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/main.js"></script>
+    <script type='text/javascript' src='js/astar.js'></script>
 
 	<title>Nu_Pogodi</title>
 </head>
@@ -16,7 +17,7 @@
     
         <div class="row">
 			<span>Battle Field size</span>
-			<input id="x"  type="text"> X <input id="y" type="text" >
+			<input id="x"  type="text" value="10"> X <input id="y" type="text" value="10">
 		</div>
 		<div class="row">
 			<span>Rabbit speed</span>
@@ -28,24 +29,24 @@
 		</div>
 		<div class="row">
 			<span>Tree(s) count</span>
-			<input id='treeCount' type="text">
+			<input id='treeCount' type="text" value="2">
 		</div>
 		<div class="row">
 			<span>Tree(s) lifetime</span>
-			<input id='treeLife' type="text">
+			<input id='treeLife' type="text" value="3">
 		</div>
 		<div class="row">
 			<span>Shrub(es) count</span>
-			<input id='shrubeCount' type="text">
+			<input id='shrubeCount' type="text" value="3">
 		</div>
-		<div class="row">
+		<div class="row" >
 			<span>Shrub(es) lifetime</span>
-			<input id='shrubeLife' type="text">
+			<input id='shrubeLife' type="text" value="2">
 		</div>
 
 		 <div class='mybutton'>
           <button id="runButton" class='btn btn-sm btn-success'>Run</button>
-          <button  class='btn btn-sm btn-danger'>Stop</button>
+          <button id="stopButton" class='btn btn-sm btn-danger'>Stop</button>
          </div>
     
     

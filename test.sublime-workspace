@@ -1,0 +1,438 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"treeLifeTime"
+			],
+			[
+				"t",
+				"tree"
+			],
+			[
+				"s",
+				"span"
+			],
+			[
+				"is",
+				"isTreeCount"
+			],
+			[
+				"a",
+				"addClass"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"tab",
+				"tableSizeY"
+			],
+			[
+				"ta",
+				"tableSizeX"
+			],
+			[
+				"Table",
+				"TableSearch"
+			],
+			[
+				"g",
+				"graph"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"c",
+				"count"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 3746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "runRabbit.html",
+			"settings":
+			{
+				"buffer_size": 1374,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Den4ik/Documents/GitHub/RunRabbitRun/js/main.js",
+			"settings":
+			{
+				"buffer_size": 3287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Den4ik/Downloads/JS practice/JS practice/js/main.js",
+			"settings":
+			{
+				"buffer_size": 3287,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 1019,
+				"line_ending": "Windows",
+				"name": ".mainForm{"
+			}
+		},
+		{
+			"file": "/C/Users/Den4ik/Downloads/javascript-astar-master/javascript-astar-master/demo/demo.js",
+			"settings":
+			{
+				"buffer_size": 6789,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/Chome.sublime-build",
+	"command_palette":
+	{
+		"height": 260.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Bro",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Den4ik/Documents/GitHub/RunRabbitRun/js/main.js",
+		"/D/Den4ik/JS practice/style.css",
+		"/D/Den4ik/JS practice/test.sublime-project",
+		"/C/Users/Den4ik/AppData/Roaming/Sublime Text 2/Installed Packages/Package Control.sublime-package",
+		"/C/Users/Den4ik/AppData/Roaming/Sublime Text 2/Packages/User/Chome.sublime-build"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"generatePlants",
+			"this",
+			"randomTree",
+			"isTree",
+			"empty",
+			"class=''",
+			"class",
+			"textInForm",
+			"div",
+			"column",
+			"placeholder",
+			"type",
+			"class",
+			"field_label",
+			"=\"\">",
+			"field_label",
+			"fieldsInForm",
+			"div"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 3746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2610,
+								2610
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 987.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "runRabbit.html",
+					"settings":
+					{
+						"buffer_size": 1374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								578,
+								578
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Den4ik/Documents/GitHub/RunRabbitRun/js/main.js",
+					"settings":
+					{
+						"buffer_size": 3287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1236.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Den4ik/Downloads/JS practice/JS practice/js/main.js",
+					"settings":
+					{
+						"buffer_size": 3287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1039.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/style.css",
+					"settings":
+					{
+						"buffer_size": 1019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								769,
+								769
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".mainForm{",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 339.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Den4ik/Downloads/javascript-astar-master/javascript-astar-master/demo/demo.js",
+					"settings":
+					{
+						"buffer_size": 6789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2930,
+								2930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1708.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true
+}
