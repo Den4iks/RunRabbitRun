@@ -2,6 +2,15 @@
     float: left
 }
 
+#message {
+    float: right;
+    color:#f00;
+    font-size:3.2em;
+    width: 100%;
+    margin-left: 50px;
+    text-align: center;
+}
+
 #table{
     float: left;
     margin: 100px 0px 0px 50px;

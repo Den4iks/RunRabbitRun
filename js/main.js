@@ -5,61 +5,74 @@
    * Time: 15:50
    * To change this template use File | Settings | File Templates.
    */
-   $(function() {
-    $('#runButton').click(function (){
-     init();
-     var $table = $('#table');
-     var opts = {
-      tableSizeX:$('#x').val(),
-      tableSizeY:$('#y').val(),
-      tree:tree,
-      shrub:shrub,
-      wolf:wolf,
-      rabbit:rabbit
-    }
+   $(document).ready(function() {
+     function Animal(speed){
+       this.speed=speed
+     };
 
-    var table = new TableSearch ($table,opts,astar.search)
+     function Plant(count,lifeTime){
+       this.count=count;
+       this.lifeTime=lifeTime;
+     }
 
-  });
-  });
-   function Animal(speed){
-     this.speed=speed
-   };
+     function Rabbit(speed){
+       Animal.call(this,speed);
+     }
 
-   function Plant(count,lifeTime){
-     this.count=count;
-     this.lifeTime=lifeTime;
-   }
+     function Wolf(speed){
+       Animal.call(this,speed);
+       this.findProperWay=findWay;
+     }
 
-   function Rabbit(speed){
-     Animal.call(this,speed);
-   }
+     function Tree (count,lifeTime) {
+       Plant.call(this,count,lifeTime)
+     }
 
-   function Wolf(speed){
-     Animal.call(this,speed);
-     this.findProperWay=findWay;
-   }
+     function Shrub (count,lifeTime) {
+       Plant.call(this,count,lifeTime)
+     }
 
-   function Tree (count,lifeTime) {
-     Plant.call(this,count,lifeTime)
-   }
 
-   function Shrub (count,lifeTime) {
-     Plant.call(this,count,lifeTime)
-   }
+     $('#runButton').click(function (){
+      $('#table').empty();
+      $('#message').empty();
+      clearInterval(self.timer);
+      rabbit = new Rabbit($('#rabbitSpeed').val());
+      wolf = new Wolf($('#wolfSpeed').val());
+      tree = new Tree($('#treeCount').val(),$('#treeLife').val());
+      shrub = new Shrub($('#shrubeCount').val(),$('#shrubeLife').val());
+      var $table = $('#table');
+      var opts = {
+        tableSizeX:$('#x').val(),
+        tableSizeY:$('#y').val(),
+        tree:tree,
+        shrub:shrub,
+        wolf:wolf,
+        rabbit:rabbit
+      }
 
+      var table = new TableSearch ($table,opts,astar.search)
+
+    });
+   });
+
+
+  
    var findWay = function way($end,self) {
     var end = self.nodeFromElement($end,self);
 
     this.currentPosition.removeClass('wolf');
-    /*$end.addClass("finish");*/
-    /*var $start = this.$cells.filter("." + css.start);*/
+  
     var start = self.nodeFromElement(this.currentPosition,self);
 
 
     var path = self.search(self.graph.nodes, start, end);
-    self.animatePath(path);
-    
+    if(wolf.currentPosition!==rabbit.currentPosition && path.length==0 || !path  ) {
+      $("#message").text("Couldn't find a path");
+      clearInterval(self.timer)
+    }else{
+      self.animatePath(path,self);
+    }
   };
 
 
@@ -83,7 +96,6 @@ TableSearch.prototype.generate = function() {
   var OPEN = 1;
   var self = this;
   this.grid = [];
-  this.nodes = [];
   var $graph = this.$graph;
 
   $graph.empty();
@@ -109,23 +121,22 @@ TableSearch.prototype.generate = function() {
         this.grid.push(gridRow);
         
       }
+      //First step
       generateTree();
       generateShrub();
       generateStartWolfPosition();
       generateStartRabbitPosition();
-      generateNode();
-      this.graph = new Graph(self.nodes);
-      
-      var timer=setInterval(step,1000);
+      //First step
+      this.timer=setInterval(step,1000);
       var treeLifeTime=this.opts.tree.lifeTime;
       var shrubLifeTime=this.opts.shrub.lifeTime;
       $('#stopButton').click(function (){
-        clearInterval(timer);
-        $graph.empty();
+        clearInterval(self.timer);
+        self.$graph.empty();
         return;
       });
       function step(){
-        wolf.findProperWay(rabbit.currentPosition,self)
+         self.nodes = [];
         --treeLifeTime;
         if(treeLifeTime===0){
           treeLifeTime=self.opts.tree.lifeTime;
@@ -136,6 +147,10 @@ TableSearch.prototype.generate = function() {
           shrubLifeTime=self.opts.shrub.lifeTime;
           generateShrub();
         }
+        generateNode();
+        self.graph = new Graph(self.nodes);
+        wolf.findProperWay(rabbit.currentPosition,self)
+        
         
       }
 
@@ -214,19 +229,9 @@ TableSearch.prototype.generate = function() {
 TableSearch.prototype.nodeFromElement = function($cell,self) {
   return self.graph.nodes[parseInt($cell.attr("x"))][parseInt($cell.attr("y"))];
 };
-TableSearch.prototype.animateNoPath = function() {
-  var $graph = this.$graph;
-  var jiggle = function(lim, i) {
-    if(i>=lim) { $graph.css("top", 0).css("left", 0); return;  }
-    if(!i) i=0;
-    i++;
-    $graph.css("top", Math.random()*6).css("left", Math.random()*6);
-    setTimeout( function() { jiggle(lim, i) }, 5 );
-  };
-  jiggle(15);
-};
-TableSearch.prototype.animatePath = function(path) {
-  var i= 1;
+
+TableSearch.prototype.animatePath = function(path,self) {
+  i=0
   var speed = wolf.speed; 
   var grid = this.grid;
   var elementFromNode = function(node) {
@@ -234,22 +239,25 @@ TableSearch.prototype.animatePath = function(path) {
   };
 
   var removeClass = function(path, i) {
-    if(i>=path.length) return;
-    elementFromNode(path[i]).removeClass('active');
-    setTimeout( function() { removeClass(path, i+1) }, 100);
+
+    elementFromNode(path[i]).removeClass('wolf');
+    
   }
   var addClass = function(path, i)  {
-      if(i>=path.length) {  // Finished showing path, now remove
-        return removeClass(path, 0);
-      }
-  elementFromNode(path[i]).addClass('active');
-      
-    ++i;
-
+    if (path.length>2){
+      setTimeout( function() { removeClass(path, i-1) }, 300);
+}
+      elementFromNode(path[i]).addClass('wolf');
+      wolf.currentPosition=elementFromNode(path[i]);
     };
     while (speed>0) {
+      if(path.length==1 || wolf.currentPosition==rabbit.currentPosition) { 
+        $("#message").text("Wolf Win");
+        clearInterval(self.timer); 
+           }
       addClass(path, i)
       --speed;
+      i++
     }
 
   };
