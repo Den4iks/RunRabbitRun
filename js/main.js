@@ -100,8 +100,8 @@ TableSearch.prototype.generate = function() {
 
   $graph.empty();
 
-      var cellWidth = ($graph.width()/this.opts.tableSizeY);  // -2 for border
-      var cellHeight = ($graph.height()/this.opts.tableSizeX);
+      var cellWidth = ($graph.width()/this.opts.tableSizeY-2);  // -2 for border
+      var cellHeight = ($graph.height()/this.opts.tableSizeX-2);
       var $cellTemplate = $("<span />").addClass("grid_item").width(cellWidth).height(cellHeight);
       
       for(var x=0;x<this.opts.tableSizeX;x++) {
